@@ -1,5 +1,5 @@
 /* A simple demonstration on incorrect output of vsadd_vi for gem5(a555449)
- * Setting: vlen = 256, elen = 64.
+ * Setting: vlen = 256, elen = 64, xlen = 64.
  * In this case, vl is set to 1 for conciseness.
  * 
  * The operation Vd = vsadd_vx_i8m1(Vs1, -1, 1) should perform calculation

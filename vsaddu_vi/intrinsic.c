@@ -1,10 +1,10 @@
-/* A simple demonstration on incorrect output of vsadd_vi for gem5(a555449)
+/* A simple demonstration on incorrect output of vsaddu_vi for gem5(a555449)
  * Setting: vlen = 256, elen = 64, xlen = 64.
  * In this case, vl is set to 1 for conciseness.
  * 
- * The operation Vd = vsadd_vx_i8m1(Vs1, -1, 1) should perform calculation
- * Vd[0] = Vs1[0] + (-1), which is 0 = 1 + (-1) in the example below.
- * However, gem5 incorrectly output 32 as result.
+ * The operation Vd = vsadd_vx_i8m1(Vs1, 240, 1) should perform calculation
+ * Vd[0] = Vs1[0] + 240, which is 241 = 1 + 240 in the example below.
+ * However, gem5 incorrectly output 17 instead of 241.
  */
 #include <stdint.h>
 #include <stdio.h>
